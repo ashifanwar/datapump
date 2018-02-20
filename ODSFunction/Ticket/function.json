@@ -1,0 +1,25 @@
+﻿{
+  "bindings": [
+    {
+      "name": "ticket",
+      "type": "serviceBusTrigger",
+      "direction": "in",
+      "queueName": "ticket",
+      "connection": "ServiceBusConnection",
+      "accessRights": "listen",
+      "methods": [
+        "post"
+      ]
+    }
+    //{
+    //  "type": "blobTrigger",
+    //  "name": "ticket",
+    //  "path": "tickets/{blobName}",
+    //  "connection": "StorageConnectionString",
+    //  "direction": "in"
+    //}
+  ],
+  "disabled": false,
+  "scriptFile": "..\\bin\\ODSFunction.Implementation.dll",
+  "entryPoint": "ODSFunction.Implementation.TicketFunction.TicketFunction.Run"
+}
